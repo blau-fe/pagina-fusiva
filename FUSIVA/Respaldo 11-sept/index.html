@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusiva - Cultura de Innovación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="#" class="logo">Fusiva</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="https://forms.gle/YTznVbdeKDQ4W2fBA" target="_blank" rel="noopener noreferrer">Aporte Semanal</a></li>
+                <li><a href="#catalogo">Cápsulas</a></li>
+                <li><a href="#podcast">Podcast</a></li>
+                <li><a href="#escribenos">Escríbenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+    <h1>Cultura de<br>innovación.</h1>
+    <p class="hero-description">Una nueva etapa comienza, en el Universo Blau creemos en los cambios, la actitud y la productividad. 
+        ¿Listos? </p>
+    <div class="hero-icon">+</div>
+</div>
+        </section>
+
+        <section id="catalogo" class="catalogo-section">
+            <div class="section-header">
+                <h2>Cápsulas</h2>
+                <div class="carousel-nav">
+                    <button class="arrow" id="prev-btn-catalogo">&lt;</button>
+                    <button class="arrow" id="next-btn-catalogo">&gt;</button>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-track" id="track-catalogo">
+                    <div class="carousel-item video-trigger" data-video-src="https://www.youtube.com/embed/8kmm8TmsWry?autoplay=1">
+                        <img src="imagenes/Cap 1.jpg" alt="Miniatura Cápsula 1">
+                        <div class="play-icon">&#9658;</div>
+                        <div class="video-info">
+                            <h3>Cápsula 1. Innovita</h3>
+                            <p>Hola! Mi nombre es Innovita y te acompañré en esta nueva aventura de la innovación dentro del Universo Blau</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item video-trigger" data-video-src="https://www.youtube.com/embed/Jotd6IDLpps?autoplay=1">
+                        <img src="imagenes/Cap 2.jpg" alt="Miniatura Cápsula 2">
+                        <div class="play-icon">&#9658;</div>
+                        <div class="video-info">
+                            <h3>Cápsula 2. ABC de la Innovación</h3>
+                            <p>¿Ya está en nuestro disco duro interno lo que es innovación? Muy bien, ahora apliquémoslo en nuestro día a día.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ver-mas-container">
+                <a href="#" class="ver-mas-btn">Ver más</a>
+            </div>
+        </section>
+
+        <section id="podcast" class="catalogo-section">
+            <div class="section-header">
+                <h2>Blaücast</h2>
+                <div class="carousel-nav">
+                    <button class="arrow" id="prev-btn-podcast">&lt;</button>
+                    <button class="arrow" id="next-btn-podcast">&gt;</button>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-track" id="track-podcast">
+                    <div class="carousel-item video-trigger" data-video-src="https://www.youtube.com/embed/8kmm8TmsWry?autoplay=1">
+                        <img src="imagenes/Ep1.jpg" alt="Miniatura Episodio 1">
+                        <div class="play-icon">&#9658;</div>
+                        <div class="video-info">
+                            <h3>Episodio 1: Gemini, el copiloto del home office</h3>
+                            <p>En este episodio hablamos sobre Gemini, la inteligencia artificial multimodal de Google. ¡Dale play y acompáñanos!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item video-trigger" data-video-src="https://www.youtube.com/embed/Jotd6IDLpps?autoplay=1">
+                        <img src="imagenes/Ep2.jpg" alt="Miniatura Episodio 2">
+                        <div class="play-icon">&#9658;</div>
+                        <div class="video-info">
+                            <h3>Episodio 2: Google Workspace, tu aliado diario</h3>
+                            <p>Desenterramos los trucos y hacks secretos de Gmail, Docs, Calendar y Drive que transformarán tu productividad.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item video-trigger" data-video-src="https://www.youtube.com/embed/HSY1VwpRYbM?autoplay=1">
+                        <img src="imagenes/Ep3.jpg" alt="Miniatura Episodio 3">
+                        <div class="play-icon">&#9658;</div>
+                        <div class="video-info">
+                            <h3>Episodio 3: Notion, dejando de procastinar</h3>
+                            <p>Te mostramos cómo usar Notion para crear un "centro de mando" para TU vida. ¡Organiza tu vida, transforma tu carrera!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ver-mas-container">
+                <a href="#" class="ver-mas-btn">Ver más</a>
+            </div>
+        </section>
+
+        <section id="escribenos" class="contact-section">
+            <div class="contact-text">
+                <h2>¿Tienes una<br><span class="highlight">gran idea?</span><br>Nos encantaría<br>escucharla.</h2>
+            </div>
+            <div class="contact-form-container">
+                <form id="contact-form" action="https://formspree.io/f/xpwjwwyo" method="POST">
+                    <h3>Cuéntanos aquí</h3>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idea">¿Qué tienes en mente?</label>
+                        <textarea id="idea" name="idea" rows="4" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde Fusiva">
+                    <button type="submit" class="submit-btn">
+                        ¡Enviar!
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                    <p id="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        </footer>
+
+    <script src="script.js"></script>
+
+    <div id="video-lightbox" class="lightbox-overlay hidden">
+        <div class="lightbox-content">
+            <button id="close-lightbox" class="close-lightbox">&times;</button>
+            <div id="video-container"></div>
+        </div>
+    </div>
+</body>
+</html>
