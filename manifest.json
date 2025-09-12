@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Fusiva - Recordatorio Semanal",
+  "version": "1.1",
+  "description": "Un recordatorio cada viernes para llenar tu aporte semanal en la página de Fusiva.",
+  "permissions": [
+    "alarms",
+    "notifications"
+  ],
+  "action": {
+    "default_title": "Ir a la página de Fusiva"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "imagenes/icono48.png",
+    "128": "imagenes/icono128.png"
+  }
+}
