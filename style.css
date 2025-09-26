@@ -86,7 +86,21 @@ body {
 
 .hero-content { z-index: 10; }
 .hero-content h1 { font-family: var(--font-main); font-size: clamp(3rem, 8vw, 6rem); line-height: 1.1; margin: 0; color: var(--text-light); }
-.hero-description { font-size: 1.2rem; line-height: 1.6; color: var(--text-muted); max-width: 600px; margin: 1.5rem auto 0 auto; font-weight: 600; }
+.hero-description {
+  /* Fuente Exo 2 importada */
+  font-family: 'Exo 2', sans-serif; /* 'sans-serif' es un respaldo por si falla la carga */
+
+  font-size: 1.25rem;
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+  font-weight: 600; 
+
+  max-width: 600px;
+  margin: 1.5rem auto 0 auto;
+  color: #d1d9e8;
+  text-shadow: 0 0 8px #4D94FF;
+}
+ 
 .hero-icon { display: inline-block; font-size: 1.5rem; color: var(--accent-glow); text-shadow: 0 0 15px var(--accent-glow); margin-top: 2rem; }
 
 /* --- SECCIÓN CATÁLOGO Y PODCAST (ESTILO CARRUSEL) --- */
@@ -177,7 +191,6 @@ body {
 .ver-mas-btn:hover { background-color: var(--border-color); }
 
 /* --- SECCIÓN CONTACTO --- */
-/* (El resto de tu CSS para el formulario y footer se mantiene igual) */
 .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 8rem 5%; align-items: center; border-top: 1px solid var(--border-color); }
 .contact-text h2 { font-family: var(--font-main); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; margin: 0; }
 .highlight { color: var(--accent-teal); }
@@ -191,3 +204,67 @@ body {
     .contact-section { grid-template-columns: 1fr; }
     .main-header { flex-direction: column; gap: 1rem; }
 }
+
+/* --- INICIA ANIMACIÓN DE LUCES DE FONDO --- */
+
+body {
+  /* IMPORTANTE: Esto es necesario para que las luces se posicionen correctamente */
+  position: relative;
+  overflow-x: hidden; 
+}
+
+/* Creamos la primera luz (morada) */
+body::before {
+  content: '';
+  position: absolute;
+  z-index: -1; /* La ponemos detrás de todo */
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  
+  /* Color y desenfoque para el efecto "blob" */
+  background-color: #5d3f99; 
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6; /* Hacemos la luz un poco más sutil */
+  
+  /* Aquí aplicamos la animación */
+  animation: moveLight1 25s ease-in-out infinite;
+}
+
+/* Creamos la segunda luz (naranja) */
+body::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* También detrás de todo */
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  
+  /* Color y desenfoque */
+  background-color: #e88c3a; /* Un tono naranja/ámbar similar al tuyo */
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  
+  /* Aplicamos una animación diferente para que no se muevan igual */
+  animation: moveLight2 35s ease-in-out infinite;
+}
+
+/* Definimos el movimiento de la primera luz */
+@keyframes moveLight1 {
+  0%   { transform: translate(10vw, -10vh); }
+  50%  { transform: translate(40vw, 50vh); }
+  100% { transform: translate(10vw, -10vh); }
+}
+
+/* Definimos el movimiento de la segunda luz */
+@keyframes moveLight2 {
+  0%   { transform: translate(-20vw, 20vh); }
+  50%  { transform: translate(-50vw, -30vh); }
+  100% { transform: translate(-20vw, 20vh); }
+}
+
+/* --- TERMINA ANIMACIÓN DE LUCES DE FONDO --- */
