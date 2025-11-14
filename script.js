@@ -86,4 +86,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- 4. Funcionalidad del carrusel de IASITORIO ---
+// Selecciona los botones y el contenedor específicos para el nuevo carrusel.
+const nextBtnIasitorio = document.getElementById('next-btn-iasitorio');
+const prevBtnIasitorio = document.getElementById('prev-btn-iasitorio');
+const trackIasitorio = document.getElementById('track-iasitorio');
+
+// Se asegura de que los elementos existan antes de añadir la funcionalidad.
+if(nextBtnIasitorio && prevBtnIasitorio && trackIasitorio){
+    nextBtnIasitorio.addEventListener('click', () => {
+        // Mueve el carrusel hacia la derecha
+        trackIasitorio.scrollBy({ left: 366, behavior: 'smooth' }); // 350px de ancho de tarjeta + 1.5rem (24px) de espacio
+    });
+    prevBtnIasitorio.addEventListener('click', () => {
+        // Mueve el carrusel hacia la izquierda
+        trackIasitorio.scrollBy({ left: -366, behavior: 'smooth' });
+    });
+}
+
 });
